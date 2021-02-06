@@ -1,0 +1,28 @@
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    background-image: url("pg-background.jpg");
+}
+h1, h2, #burgerad, footer, #burgermenu {
+    text-align: center;
+}
+#moreroom {
+    position: relative;
+    left: 60px;
+}
+ul {
+    text-align: center;
+    list-style-position: inside;
+}
+#smashburger, #girlburger{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+#burgermenuimg {
+   width: 125px;
+   height: 125px;
+}
+footer {
+    font-size: 12px;
+}
