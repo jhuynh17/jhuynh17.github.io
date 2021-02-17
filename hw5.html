@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>HTML Headers: 1 to 3</title>
+        <meta name="description" content="Webpage displaying examples of different HTML header tags from header tag one to header tag three.">
+        <style>
+
+            #jsalarmclock{
+            font-family: Tahoma;
+            font-weight: bold;
+            font-size: 12px;
+            }
+            
+            #jsalarmclock div{
+            margin-bottom: 0.8em;
+            }
+            
+            #jsalarmclock div.leftcolumn{
+            float: left;
+            width: 150px;
+            font-size: 13px;
+            background-color: lightyellow;
+            clear: left;
+            }
+            
+            #jsalarmclock span{
+            margin-right: 5px;
+            }
+            
+            </style>
+            
+            <script>
+            
+            /***********************************************
+            
+            * JavaScript Alarm Clock- by JavaScript Kit (www.javascriptkit.com)
+            * This notice must stay intact for usage
+            * Visit JavaScript Kit at http://www.javascriptkit.com/ for this script and 100s more
+            
+            ***********************************************/
+            
+            var jsalarm={
+                padfield:function(f){
+                    return (f<10)? "0"+f : f
+                },
+                showcurrenttime:function(){
+                    var dateobj=new Date()
+                    var ct=this.padfield(dateobj.getHours())+":"+this.padfield(dateobj.getMinutes())+":"+this.padfield(dateobj.getSeconds())
+                    this.ctref.innerHTML=ct
+                    this.ctref.setAttribute("title", ct)
+                    if (typeof this.hourwake!="undefined"){ //if alarm is set
+                        if (this.ctref.title==(this.hourwake+":"+this.minutewake+":"+this.secondwake)){
+                            clearInterval(jsalarm.timer)
+                            window.location=document.getElementById("musicloc").value
+                        }
+                    }
+                },
+                init:function(){
+                    var dateobj=new Date()
+                    this.ctref=document.getElementById("jsalarm_ct")
+                    this.submitref=document.getElementById("submitbutton")
+                    this.submitref.onclick=function(){
+                        jsalarm.setalarm()
+                        this.value="Alarm Set"
+                        this.disabled=true
+                        return false
+                    }
+                    this.resetref=document.getElementById("resetbutton")
+                    this.resetref.onclick=function(){
+                    jsalarm.submitref.disabled=false
+                    jsalarm.hourwake=undefined
+                    jsalarm.hourselect.disabled=false
+                    jsalarm.minuteselect.disabled=false
+                    jsalarm.secondselect.disabled=false
+                    return false
+                    }
+                    var selections=document.getElementsByTagName("select")
+                    this.hourselect=selections[0]
+                    this.minuteselect=selections[1]
+                    this.secondselect=selections[2]
+                    for (var i=0; i<60; i++){
+                        if (i<24) //If still within range of hours field: 0-23
+                        this.hourselect[i]=new Option(this.padfield(i), this.padfield(i), false, dateobj.getHours()==i)
+                        this.minuteselect[i]=new Option(this.padfield(i), this.padfield(i), false, dateobj.getMinutes()==i)
+                        this.secondselect[i]=new Option(this.padfield(i), this.padfield(i), false, dateobj.getSeconds()==i)
+            
+                    }
+                    jsalarm.showcurrenttime()
+                    jsalarm.timer=setInterval(function(){jsalarm.showcurrenttime()}, 1000)
+                },
+                setalarm:function(){
+                    this.hourwake=this.hourselect.options[this.hourselect.selectedIndex].value
+                    this.minutewake=this.minuteselect.options[this.minuteselect.selectedIndex].value
+                    this.secondwake=this.secondselect.options[this.secondselect.selectedIndex].value
+                    this.hourselect.disabled=true
+                    this.minuteselect.disabled=true
+                    this.secondselect.disabled=true
+                }
+            }
+            </script>
+    </head>
+    <body style="background-image:url('double-bubble-outline.png'); background-color:#fbfdfd;">
+        <header><h1 style="text-align:center;">HTML Headers: 1 to 3</h1></header>
+        <section>
+        <h2 style="font-style:italic;">How headers are helpful pt.1</h2>
+        <p><span style="font-size:50px">H</span>eaders are used to help structure and provide headlines in level of importance. It is best practice to have the first biggest headline or title to have the header tag one. Followed by header two, threee, and so on.</p>
+       <article>
+        <h3 style="text-align:right;">How headers are helpful pt.2</h3>
+        <p><span style="font-size:60px;">T</span>o developers, it is important to utilize headers throughout a webpage to highlight what topics or transtitions may occur. For instance, a viewer or user of the website may be searching for the latest recipe for a dish, it may be difficult for them to find it on a webpage with fonts of the same size as nothing seems to standout. With headers, it help guides a reader to see top headlines such as the "Latest Recipes."</p>
+        <h4>Javascript Clock</h4>
+        <p>With the JavaScript code, it allows me to create and display a "24 hour cycle" alarm clock in which performs a specific action of going to the webpage set on the "alarm action" setiion when the target time at "set alarm" is reached. In this example, the Javascript allows for the script to go the Yotuube and play a music video of an alarm sound when the "set alarm" time is met.</p>
+        <form action="#" method="post">
+            <div id="jsalarmclock">
+            <div><div class="leftcolumn">Current Time:</div> <span id="jsalarm_ct" style="letter-spacing: 2px"></span></div>
+            <div><div class="leftcolumn">Set Alarm:</div> <span><select></select> Hour</span> <span><select></select> Minutes</span> <span><select></select> Seconds</span></div>
+            <div><div class="leftcolumn">Set Alarm Action:</div> <input type="text" id="musicloc" size="55" value="http://www.youtube.com/watch?v=v1zY_tV5kaQ" /> <span style="font: normal 11px Tahoma">*Location of page to launch</span></div>
+            <input type="submit" value="Set Alarm!" id="submitbutton" /> <input type="reset" value="reset" id="resetbutton" />
+            </div>
+            </form>
+            
+            
+            <script>
+            
+            jsalarm.init()
+            
+            </script>
+            <p>Try changing the location of page to another webpage of your own!</p>
+    </article>
+    </section>
+    <footer style="background-image:url('wallpaper.jpeg'); background-repeat: repeat-x; background-position:top; border: 3px solid #0000ff;">
+        <p>Here is the first paragraph displayed in the footer section.</p>
+        <p>Here is the second paragraph displayed in the footer section.</p>
+        <p>Here is the third paragraph displayed in the footer section.</p>
+        <p>Here is the fourth paragraph displayed in the footer section.</p>
+        <p>Here is the fifth paragraph displayed in the footer section.</p>
+    </footer>
+    </body>
+</html>
