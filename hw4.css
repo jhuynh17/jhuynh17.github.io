@@ -1,0 +1,9 @@
+h1 {
+    color: #0000FF;
+    text-align: center;
+}
+body {color: ##3399ff; background: url(student.jpg) no-repeat top right,  url(elementarystudent.png) no-repeat bottom left, #ffffe6; padding-top: 80px; padding-bottom:90px; }
+figure {margin: auto; text-align:center; }
+#footerlinks {
+    text-align: center;
+}
