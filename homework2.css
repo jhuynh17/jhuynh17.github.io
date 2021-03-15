@@ -1,0 +1,57 @@
+body {
+   background: #ffff00;
+   color: #000000;
+  animation: mymove 8s forwards;
+}
+@keyframes mymove {
+    from {background-color: #ffff00;}
+    to {background-color: #e6e6fa;}
+    from {color: #000000;}
+    to {color: #008000;}
+  }
+a, .cherry {
+    color:red;
+}
+h1 {
+    color: red;
+    text-align: center;
+}
+p {
+    font-size: 1em;
+}
+h2 {
+    text-align: right;
+    color: blue;
+    font-style: italic;
+    font-size: 1.5em;
+}
+.end {
+    font-size: 3em;
+}
+h3{
+    text-align: right;
+    color: red;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+table {
+   background-color: cyan; 
+   padding: 10px;
+   border-spacing: 5px;
+}
+td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+p::first-letter {
+    font-weight: bold;
+    font-size: 3em;
+    font-style: italic;
+}
+.tdline {
+    font-weight: bold;
+}
+footer {
+    text-align: center;
+}
