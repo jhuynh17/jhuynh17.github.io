@@ -37,7 +37,12 @@ img{
     margin-right: 20px;
     overflow: auto;
 }
-p::first-letter{
+#redletter1::first-letter{
+    font-weight: bold;
+    font-size: 250%;
+    color: #990000;
+}
+#redletter2::first-letter{
     font-weight: bold;
     font-size: 250%;
     color: #990000;
