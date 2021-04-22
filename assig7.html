@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Assignment 7</title>
+<meta name="description" content="This webpage is working with forms from float CSS to grid.">
+<meta property="og:title" content="Forms from float CSS to grid">
+<meta property="og:url" content="https://jhuynh17.github.io/assig7.html">
+<meta property="og:description" content="This webpage is working with forms from float CSS to grid.">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+form {
+  padding: 1em;
+  background: #f9f9f9;
+  border: 1px solid black;
+  margin-top: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1em;
+}
+form input {
+  margin-bottom: 1rem;
+  background: white;
+  border: 1px solid #9c9c9c;
+}
+label {
+  text-align: right;
+  display: block;
+  padding: 0.5em 1.5em 0.5em 0;
+}
+#age, #setdate, #reward{
+  width: 550px;
+}
+input[type]
+.myinput {
+  width: 100%;
+  padding: 0.7em;
+  margin-bottom: 0.5rem;
+}
+#reward:focus {
+  background-color: gold;
+}
+form div, footer { text-align:center; }
+input[type="submit"], input[type="reset"] {
+  background: lightgray;
+  padding: 0.7em;
+  border: 0;
+}
+h1 { text-align: center; font-style: italic; color: gold; }
+</style>
+</head>
+<body>
+<h1>Assignment 7 - working with forms</h1>
+<form class="form1" action="#" method="post">
+  <!-- First Name - this field should be required and accept a maximum of 15 characters -->
+  <label for id="firstname">First Name</label><input type="text" required name="firstname" id="firstname" size="77" maxlength="15">
+  <!-- Last Name - this field should accept only a maximum of 25 characters -->
+  <label for id="lastname">Last Name</label><input type="text" required name="lastname" id="lastname" size="77" maxlength="25">
+ <!-- Age - this field should accept only numbers between 18 and 65 (both included) -->
+  <label for id="age">Age</label><input type="number" name="age" id="age" size="77" min="18" max="65">
+  <!-- Email - this field should be required -->
+  <label for="myemail">Email</label>
+  <input type="email" name="myemail" id="myemail" required size="77"/>
+  <!-- Date of Membership - this field should accept a date but only up to 2021-12-31 - the user should not be able to enter any date after that limit. -->
+  <label for id="setdate">Date of your Membership</label>
+  <input type="date" name="setdate" id="setdate" size="77" max="2021-12-31">
+ <!-- Choose your reward - this will be a field with the options as shown in the right bottom part of the image below -->
+  <label for = "reward">Choices for "Choose your Reward" field</label><select id="reward">
+    <option></option>
+    <option>Two-year Member Magazine subscription" </option>
+    <option>2 Tickets to Annual Semiar</option>
+    <option>Voucher $100 food during seminar</option>
+    <option>1-day hotel stay for Seminar</option>
+  </select>
+  <br><br>
+            <div><input type="submit" value="Submit"> &nbsp; <input type="reset" value="Clear"></div>
+        
+    <footer> 
+          <a href="assig7.html">Home</a> | 
+          <a href="assignments.html">CNIT 132 Assignments</a>
+    </footer> 
+  </form>
+</body>
+</html>
