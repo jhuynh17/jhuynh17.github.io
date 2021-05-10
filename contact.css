@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+       }
+   form {
+       padding: 1em;
+       background: #f9f9f9;
+       border: 1px solid black;
+       margin-top: 2rem;
+       max-width: 600px;
+       margin-left: auto;
+       margin-right: auto;
+       padding: 1em;
+      }
+   form input {
+       margin-bottom: 1rem;
+       background: white;
+       border: 1px solid #9c9c9c;
+      }
+      textarea {
+          height:200px;
+          width:500px;
+      }
+      header, footer {
+          text-align: center;
+      }
+      body {
+        background-color:#add8e6;
+        font-family:'PT Sans', sans-serif;
+    }
+    .favicon-logo {
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+    h1, footer {
+        text-align: center;
+    }
+    .profilepic {
+        width:150; 
+        height:150;
+    }
+    a, li, ul  {
+        text-decoration: none;
+        list-style-type: none;
+    }
+    .header {
+        grid-area: hd;
+    }
+    .footer {
+        grid-area: ft;
+    }
+    .content {
+        grid-area: main;
+    }
+    .sidebar {
+        grid-area: sd;
+    }
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: minmax(100px, auto);
+        grid-template-areas:
+          "hd hd hd hd   hd   hd   hd   hd   hd"
+          "sd sd sd main main main main main main"
+          "ft ft ft ft   ft   ft   ft   ft   ft";
+    }
+    
+    .content {
+       margin-left: 200px;
+    }
+     
+    .contactform {
+        margin-left:-3px;
+    }
