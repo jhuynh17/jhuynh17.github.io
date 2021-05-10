@@ -28,8 +28,7 @@
         font-family:'PT Sans', sans-serif;
     }
     .favicon-logo {
-        margin-top: 10px;
-        margin-left: 10px;
+        margin: auto;
     }
     h1, footer {
         text-align: center;
