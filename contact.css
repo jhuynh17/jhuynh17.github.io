@@ -63,6 +63,10 @@
           "sd sd sd main main main main main main"
           "ft ft ft ft   ft   ft   ft   ft   ft";
     }
+
+.menu{
+    margin-left: 40px;
+}
     
     .content {
        margin-left: 200px;
