@@ -9,8 +9,11 @@ h1, footer{
     text-align: center;
 }
 .profilepic {
-    width:150; 
-    height:150;
+    width:150px; 
+    height:150px;
+}
+.menu{
+    margin-left: 40px;
 }
 a, li, ul  {
     text-decoration: none;
