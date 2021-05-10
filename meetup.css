@@ -1,7 +1,12 @@
-h1 {
+h1, footer{
     text-align: center;
 }
 
 h2 {
     color: #ff0000;
+}
+
+#signup {
+    width: 300px;
+    height: 200px;
 }
